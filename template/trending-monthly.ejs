@@ -1,0 +1,8 @@
+<%- include('./_partial/header', { tabCls: 'trending', title: 'GitChina-GitHub 全球最热门存储库趋势/月' }); %>
+<ul class="list repos trending">
+  <%- include('./_partial/trending_nav', { type: 'monthly' }); %>
+  <% TRENDING_MONTHLY.forEach(function(repo, idx){ %>
+    <%- include('./_partial/trending_list', { repo, idx }); %>
+  <% }); %>
+</ul>
+<%- include('./_partial/footer', { }); %>
